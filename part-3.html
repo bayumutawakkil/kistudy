@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Part III: Security Architecture & Lifecycle - CyBOK">
+  <title>Part III - CyBOK v1.1.0</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      color: #2c3e50;
+      line-height: 1.6;
+    }
+    .navbar {
+      background: #2c3e50;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      transition: var(--transition-smooth);
+    }
+    .navbar a:hover { color: #14B8A6; }
+    .header {
+      background: linear-gradient(135deg, #14B8A6 0%, #99F6E4 100%);
+      color: white;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+    .header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 3rem 1.5rem; }
+    .ka-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-left: 4px solid #14B8A6;
+    }
+    .ka-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: #1f2937; }
+    .ka-number {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #CCFBF1, #B2F5EA);
+      color: #0D9488;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      margin-right: 1rem;
+    }
+    .section-title { font-size: 1.2rem; font-weight: 700; color: #4b5563; margin: 1.5rem 0 1rem; }
+    .key-points {
+      background: #f8f9fa;
+      border-left: 4px solid #14B8A6;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+    }
+    .key-points li { margin: 0.5rem 0; }
+    .pdf-citation {
+      background: #fffbeb;
+      border-left: 4px solid #f59e0b;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+    .footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      margin-top: 3rem;
+    }
+    .nav-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: space-between;
+      margin-top: 2rem;
+    }
+    .nav-btn {
+      padding: 0.75rem 1.5rem;
+      background: #14B8A6;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: var(--transition-smooth);
+    }
+    .nav-btn:hover { background: #0D9488; }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="index-dashboard.html">← Back to Dashboard</a>
+    <strong>Part III: Security Architecture & Lifecycle</strong>
+    <a href="part-4.html">Next Part →</a>
+  </div>
+
+  <div class="header">
+    <h1>Part III: Security Architecture & Lifecycle</h1>
+    <p>Cryptography, systems security, formal methods, and access control</p>
+  </div>
+
+  <div class="container">
+    
+    <!-- KA 9 -->
+    <div class="ka-card">
+      <h3><span class="ka-number">9</span>Cryptography</h3>
+      <div class="section-title">Overview</div>
+      <p>Mathematical foundations of modern cryptography. Covers symmetric and asymmetric encryption, hash functions, digital signatures, and post-quantum cryptography.</p>
+      <div class="section-title">Key Topics</div>
+      <ul class="key-points">
+        <li><strong>Symmetric Encryption:</strong> AES, block cipher modes, stream ciphers</li>
+        <li><strong>Asymmetric Encryption:</strong> RSA, Elliptic Curve Cryptography (ECC), key transport</li>
+        <li><strong>Hash Functions:</strong> SHA-x family, cryptographic properties</li>
+        <li><strong>Digital Signatures:</strong> Signing and verification, key authentication</li>
+        <li><strong>Key Exchange Protocols:</strong> Diffie-Hellman, ECDH, perfect forward secrecy</li>
+        <li><strong>Formal Security Definitions:</strong> Semantic security, indistinguishability</li>
+        <li><strong>Cryptanalysis:</strong> Breaking cryptographic schemes, side-channel attacks</li>
+        <li><strong>Post-Quantum Cryptography:</strong> Schemes resistant to quantum computers</li>
+      </ul>
+      <div class="pdf-citation">
+        <strong>Source:</strong> CyBOK v1.1.0 - Cryptography. Crown Copyright 2021.
+      </div>
+    </div>
+
+    <!-- KA 10 -->
+    <div class="ka-card">
+      <h3><span class="ka-number">10</span>Operating Systems & Virtualisation</h3>
+      <div class="section-title">Overview</div>
+      <p>Security at the OS and hypervisor level. Covers process isolation, mandatory access control, trusted execution, and virtual machine security.</p>
+      <div class="section-title">Key Topics</div>
+      <ul class="key-points">
+        <li><strong>Process Isolation:</strong> Memory protection, address space layout</li>
+        <li><strong>Access Control Models:</strong> Discretionary (DAC) and Mandatory (MAC) access control</li>
+        <li><strong>Capability-Based Systems:</strong> Alternative access control models</li>
+        <li><strong>Kernel Security:</strong> Privilege levels, system call validation</li>
+        <li><strong>Trusted Execution Environments:</strong> TEE, ARM TrustZone, Intel SGX</li>
+        <li><strong>VM Security:</strong> Hypervisor isolation, cross-VM attacks</li>
+        <li><strong>Secure Boot & UEFI:</strong> Boot integrity verification</li>
+      </ul>
+      <div class="pdf-citation">
+        <strong>Source:</strong> CyBOK v1.1.0 - Operating Systems & Virtualisation. Crown Copyright 2021.
+      </div>
+    </div>
+
+    <!-- KA 11 -->
+    <div class="ka-card">
+      <h3><span class="ka-number">11</span>Distributed Systems Security</h3>
+      <div class="section-title">Overview</div>
+      <p>Security in distributed architectures including cloud, peer-to-peer systems, and blockchain. Addresses trust, consensus, and data integrity across autonomous nodes.</p>
+      <div class="section-title">Key Topics</div>
+      <ul class="key-points">
+        <li><strong>Byzantine Fault Tolerance:</strong> Agreement in malicious environments</li>
+        <li><strong>Consensus Mechanisms:</strong> Proof-of-Work, Proof-of-Stake, Byzantine agreements</li>
+        <li><strong>Blockchain Security:</strong> 51% attacks, smart contract vulnerabilities</li>
+        <li><strong>Cloud Security:</strong> Multi-tenancy, shared responsibility model</li>
+        <li><strong>Microservices:</strong> Service-to-service authentication, API security</li>
+        <li><strong>Trust Models:</strong> Zero-trust architecture, trust boundaries</li>
+        <li><strong>Data Consistency:</strong> CAP theorem, eventual consistency</li>
+      </ul>
+      <div class="pdf-citation">
+        <strong>Source:</strong> CyBOK v1.1.0 - Distributed Systems Security. Crown Copyright 2021.
+      </div>
+    </div>
+
+    <!-- KA 12 -->
+    <div class="ka-card">
+      <h3><span class="ka-number">12</span>Formal Methods for Security</h3>
+      <div class="section-title">Overview</div>
+      <p>Use of mathematics and logic to formally prove security properties of systems. Includes model checking, theorem proving, and protocol verification.</p>
+      <div class="section-title">Key Topics</div>
+      <ul class="key-points">
+        <li><strong>Formal Specifications:</strong> State machines, temporal logic</li>
+        <li><strong>Model Checking:</strong> Automated verification of finite systems</li>
+        <li><strong>Theorem Proving:</strong> Interactive and automated theorem provers</li>
+        <li><strong>Protocol Analysis:</strong> ProVerif, Tamarin, security policy enforcement</li>
+        <li><strong>Adversary Models:</strong> Formal definition of attacker capabilities</li>
+        <li><strong>Security Properties:</strong> Secrecy, authentication, non-repudiation</li>
+        <li><strong>Applications:</strong> TLS verification, cryptographic protocol analysis</li>
+      </ul>
+      <div class="pdf-citation">
+        <strong>Source:</strong> CyBOK v1.1.0 - Formal Methods for Security. Crown Copyright 2021.
+      </div>
+    </div>
+
+    <!-- KA 13 -->
+    <div class="ka-card">
+      <h3><span class="ka-number">13</span>Authentication, Authorisation & Accountability (AAA)</h3>
+      <div class="section-title">Overview</div>
+      <p>The three pillars of access control: proving identity, granting permissions, and recording actions. Critical for security in every system.</p>
+      <div class="section-title">Key Topics</div>
+      <ul class="key-points">
+        <li><strong>Authentication Methods:</strong> Passwords, biometrics, hardware tokens, MFA</li>
+        <li><strong>Authorization Models:</strong> RBAC, ABAC, ACLs, capability lists</li>
+        <li><strong>Access Control Frameworks:</strong> XACML, policy engines</li>
+        <li><strong>Single Sign-On (SSO):</strong> Federation, SAML, OpenID Connect, OAuth</li>
+        <li><strong>Identity Management:</strong> User provisioning, lifecycle management</li>
+        <li><strong>Accountability & Audit:</strong> Logging, audit trails, forensic analysis</li>
+        <li><strong>Non-Repudiation:</strong> Preventing denial of actions, digital signatures</li>
+      </ul>
+      <div class="pdf-citation">
+        <strong>Source:</strong> CyBOK v1.1.0 - Authentication, Authorisation & Accountability. Crown Copyright 2021.
+      </div>
+    </div>
+
+    <div class="nav-buttons">
+      <a href="part-2.html" class="nav-btn">← Back to Part II</a>
+      <a href="part-4.html" class="nav-btn">Continue to Part IV →</a>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <p><strong>CyBOK v1.1.0 - Part III: Security Architecture & Lifecycle</strong></p>
+    <p>Content extracted and summarized from the official CyBOK v1.1.0 PDF</p>
+    <p style="margin-top: 1rem; opacity: 0.8;">© Crown Copyright, The National Cyber Security Centre 2021</p>
+  </footer>
+
+</body>
+</html>

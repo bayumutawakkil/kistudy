@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Part II: Attacks & Defences - CyBOK">
+  <title>Part II - CyBOK v1.1.0</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      color: #2c3e50;
+      line-height: 1.6;
+    }
+    .navbar {
+      background: #2c3e50;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      transition: var(--transition-smooth);
+    }
+    .navbar a:hover { color: #F97316; }
+    .header {
+      background: linear-gradient(135deg, #F97316 0%, #FED7AA 100%);
+      color: white;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+    .header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 3rem 1.5rem; }
+    .ka-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-left: 4px solid #F97316;
+    }
+    .ka-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: #1f2937; }
+    .ka-number {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #FFEDD5, #FED7AA);
+      color: #C2410C;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      margin-right: 1rem;
+    }
+    .section-title { font-size: 1.2rem; font-weight: 700; color: #4b5563; margin: 1.5rem 0 1rem; }
+    .key-points {
+      background: #f8f9fa;
+      border-left: 4px solid #F97316;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+    }
+    .key-points li { margin: 0.5rem 0; }
+    .pdf-citation {
+      background: #fffbeb;
+      border-left: 4px solid #f59e0b;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+    .footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      margin-top: 3rem;
+    }
+    .nav-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: space-between;
+      margin-top: 2rem;
+    }
+    .nav-btn {
+      padding: 0.75rem 1.5rem;
+      background: #F97316;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: var(--transition-smooth);
+    }
+    .nav-btn:hover { background: #C2410C; }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="index-dashboard.html">← Back to Dashboard</a>
+    <strong>Part II: Attacks & Defences</strong>
+    <a href="part-3.html">Next Part →</a>
+  </div>
+
+  <div class="header">
+    <h1>Part II: Attacks & Defences</h1>
+    <p>Threats, attack technologies, incident management, and forensics</p>
+  </div>
+
+  <div class="container">
+    
+    <!-- KA 5 -->
+    <div class="ka-card">
+      <h3><span class="ka-number">5</span>Malware & Attack Technologies</h3>
+      <div class="section-title">Overview</div>
+      <p>Comprehensive study of malicious software including viruses, worms, Trojans, ransomware, and spyware. Covers development techniques, detection methods, and the malware ecosystem.</p>
+      <div class="section-title">Key Topics</div>
+      <ul class="key-points">
+        <li><strong>Malware Types:</strong> Viruses, worms, Trojans, ransomware, spyware, adware, rootkits</li>
+        <li><strong>Obfuscation & Evasion:</strong> Polymorphism, metamorphism, code encryption, anti-analysis</li>
+        <li><strong>Propagation Methods:</strong> Network worms, email, drive-by downloads, software vulnerabilities</li>
+        <li><strong>Malware Ecosystem:</strong> Command & control infrastructure, botnet operations</li>
+        <li><strong>Detection Techniques:</strong> Signature-based detection, heuristic analysis, behavioral detection</li>
+        <li><strong>Analysis & Reverse Engineering:</strong> Static and dynamic malware analysis</li>
+        <li><strong>Mitigation & Defense:</strong> Host-based and network-based detection systems</li>
+      </ul>
+      <div class="pdf-citation">
+        <strong>Source:</strong> CyBOK v1.1.0 - Malware & Attack Technologies. Crown Copyright 2021.
+      </div>
+    </div>
+
+    <!-- KA 6 -->
+    <div class="ka-card">
+      <h3><span class="ka-number">6</span>Adversarial Behaviours</h3>
+      <div class="section-title">Overview</div>
+      <p>Understanding cyber attackers - from individual threat actors to organized criminal groups and nation-state actors. Maps attack methodologies and motivations.</p>
+      <div class="section-title">Key Topics</div>
+      <ul class="key-points">
+        <li><strong>Threat Actor Classification:</strong> Script kiddies, hacktivists, organized crime, nation-states</li>
+        <li><strong>Motivations:</strong> Financial gain, political objectives, espionage, disruption</li>
+        <li><strong>Attack Frameworks:</strong> MITRE ATT&CK, Cyber Kill Chain, attack trees</li>
+        <li><strong>Advanced Persistent Threats (APT):</strong> Long-term, targeted campaigns</li>
+        <li><strong>Threat Intelligence:</strong> Indicators of Compromise (IOCs), threat attribution</li>
+        <li><strong>Attack Infrastructure:</strong> Botnets, C2 servers, privacy tools used by attackers</li>
+        <li><strong>Adversary Simulation:</strong> Red teaming, penetration testing</li>
+      </ul>
+      <div class="pdf-citation">
+        <strong>Source:</strong> CyBOK v1.1.0 - Adversarial Behaviours. Crown Copyright 2021.
+      </div>
+    </div>
+
+    <!-- KA 7 -->
+    <div class="ka-card">
+      <h3><span class="ka-number">7</span>Security Operations & Incident Management</h3>
+      <div class="section-title">Overview</div>
+      <p>Day-to-day security operations including detection, investigation, response, and recovery from security incidents.</p>
+      <div class="section-title">Key Topics</div>
+      <ul class="key-points">
+        <li><strong>Security Operations Centers (SOC):</strong> Organization, staffing, tools</li>
+        <li><strong>Detection Systems:</strong> Intrusion Detection Systems (IDS), IPS, firewalls</li>
+        <li><strong>SIEM Platforms:</strong> Security Information & Event Management tools</li>
+        <li><strong>Log Analysis & Correlation:</strong> Finding patterns in security events</li>
+        <li><strong>Threat Hunting:</strong> Proactive threat discovery</li>
+        <li><strong>Incident Response Process:</strong> Detection, containment, eradication, recovery</li>
+        <li><strong>Post-Incident Activities:</strong> Lessons learned, improvements</li>
+      </ul>
+      <div class="pdf-citation">
+        <strong>Source:</strong> CyBOK v1.1.0 - Security Operations & Incident Management. Crown Copyright 2021.
+      </div>
+    </div>
+
+    <!-- KA 8 -->
+    <div class="ka-card">
+      <h3><span class="ka-number">8</span>Forensics</h3>
+      <div class="section-title">Overview</div>
+      <p>Digital forensics - the science of collecting, preserving, and analyzing digital evidence for legal proceedings.</p>
+      <div class="section-title">Key Topics</div>
+      <ul class="key-points">
+        <li><strong>Forensic Process:</strong> Identification, preservation, analysis, reporting</li>
+        <li><strong>Chain of Custody:</strong> Maintaining evidence integrity for legal admissibility</li>
+        <li><strong>Disk Forensics:</strong> File system analysis, data recovery, timeline reconstruction</li>
+        <li><strong>Memory Forensics:</strong> RAM analysis, volatile data capture</li>
+        <li><strong>Network Forensics:</strong> Packet analysis, network traffic reconstruction</li>
+        <li><strong>Mobile Device Forensics:</strong> Android and iOS evidence extraction</li>
+        <li><strong>Cloud Forensics:</strong> Challenges in cloud environments, shared responsibility</li>
+        <li><strong>Encryption & Data Destruction:</strong> Challenges when data is encrypted</li>
+      </ul>
+      <div class="pdf-citation">
+        <strong>Source:</strong> CyBOK v1.1.0 - Forensics. Crown Copyright 2021.
+      </div>
+    </div>
+
+    <div class="nav-buttons">
+      <a href="part-1.html" class="nav-btn">← Back to Part I</a>
+      <a href="part-3.html" class="nav-btn">Continue to Part III →</a>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <p><strong>CyBOK v1.1.0 - Part II: Attacks & Defences</strong></p>
+    <p>Content extracted and summarized from the official CyBOK v1.1.0 PDF</p>
+    <p style="margin-top: 1rem; opacity: 0.8;">© Crown Copyright, The National Cyber Security Centre 2021</p>
+  </footer>
+
+</body>
+</html>

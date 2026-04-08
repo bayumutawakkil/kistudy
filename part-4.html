@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Part IV: Software & Platform Security - CyBOK">
+  <title>Part IV - CyBOK v1.1.0</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      color: #2c3e50;
+      line-height: 1.6;
+    }
+    .navbar {
+      background: #2c3e50;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      transition: var(--transition-smooth);
+    }
+    .navbar a:hover { color: #3B82F6; }
+    .header {
+      background: linear-gradient(135deg, #3B82F6 0%, #93C5FD 100%);
+      color: white;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+    .header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 3rem 1.5rem; }
+    .ka-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-left: 4px solid #3B82F6;
+    }
+    .ka-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: #1f2937; }
+    .ka-number {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #DBEAFE, #BFDBFE);
+      color: #1E40AF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      margin-right: 1rem;
+    }
+    .section-title { font-size: 1.2rem; font-weight: 700; color: #4b5563; margin: 1.5rem 0 1rem; }
+    .key-points {
+      background: #f8f9fa;
+      border-left: 4px solid #3B82F6;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+    }
+    .key-points li { margin: 0.5rem 0; }
+    .pdf-citation {
+      background: #fffbeb;
+      border-left: 4px solid #f59e0b;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+    .footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      margin-top: 3rem;
+    }
+    .nav-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: space-between;
+      margin-top: 2rem;
+    }
+    .nav-btn {
+      padding: 0.75rem 1.5rem;
+      background: #3B82F6;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: var(--transition-smooth);
+    }
+    .nav-btn:hover { background: #1E40AF; }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="index-dashboard.html">← Back to Dashboard</a>
+    <strong>Part IV: Software & Platform Security</strong>
+    <a href="part-5.html">Next Part →</a>
+  </div>
+
+  <div class="header">
+    <h1>Part IV: Software & Platform Security</h1>
+    <p>Secure development, web/mobile vulnerabilities, and software lifecycle</p>
+  </div>
+
+  <div class="container">
+    
+    <!-- KA 14 -->
+    <div class="ka-card">
+      <h3><span class="ka-number">14</span>Software Security</h3>
+      <div class="section-title">Overview</div>
+      <p>Implementation-level security vulnerabilities in software and techniques to prevent and mitigate them. Covers memory safety issues, injection flaws, and runtime protections.</p>
+      <div class="section-title">Key Topics</div>
+      <ul class="key-points">
+        <li><strong>Memory Safety Vulnerabilities:</strong> Buffer overflows, use-after-free, heap corruption</li>
+        <li><strong>Injection Flaws:</strong> SQL injection, command injection, code injection</li>
+        <li><strong>Race Conditions:</strong> Timing vulnerabilities, TOCTOU (Time-of-check-time-of-use)</li>
+        <li><strong>Logic Flaws:</strong> Broken authentication, authorization bypass</li>
+        <li><strong>Static Analysis:</strong> Source code scanning, SAST tools</li>
+        <li><strong>Dynamic Testing:</strong> Fuzzing, symbolic execution, runtime monitoring</li>
+        <li><strong>Runtime Protections:</strong> ASLR, DEP/NX, stack canaries, Control Flow Guard</li>
+        <li><strong>Secure Coding Practices:</strong> Input validation, output encoding, secure libraries</li>
+      </ul>
+      <div class="pdf-citation">
+        <strong>Source:</strong> CyBOK v1.1.0 - Software Security. Crown Copyright 2021.
+      </div>
+    </div>
+
+    <!-- KA 15 -->
+    <div class="ka-card">
+      <h3><span class="ka-number">15</span>Web & Mobile Security</h3>
+      <div class="section-title">Overview</div>
+      <p>Security challenges specific to web applications and mobile platforms, covering client-side and server-side vulnerabilities.</p>
+      <div class="section-title">Key Topics</div>
+      <ul class="key-points">
+        <li><strong>Web Client Vulnerabilities:</strong> Cross-Site Scripting (XSS), clickjacking, phishing</li>
+        <li><strong>Web Server Vulnerabilities:</strong> SQL injection, CSRF, insecure deserialization</li>
+        <li><strong>Browser Security:</strong> Same-Origin Policy (SOP), Content Security Policy (CSP)</li>
+        <li><strong>HTTPS & TLS:</strong> Certificate validation, pinning, mixed content</li>
+        <li><strong>Authentication:</strong> OAuth, OpenID Connect, WebAuthn, password managers</li>
+        <li><strong>Session Management:</strong> Cookies, tokens, session hijacking</li>
+        <li><strong>Mobile Platforms:</strong> iOS and Android security models, app permissions</li>
+        <li><strong>Mobile Threats:</strong> Malware, reverse engineering, data exfiltration</li>
+        <li><strong>APIs & Microservices:</strong> API security, rate limiting, authentication</li>
+      </ul>
+      <div class="pdf-citation">
+        <strong>Source:</strong> CyBOK v1.1.0 - Web & Mobile Security. Crown Copyright 2021.
+      </div>
+    </div>
+
+    <!-- KA 16 -->
+    <div class="ka-card">
+      <h3><span class="ka-number">16</span>Secure Software Lifecycle</h3>
+      <div class="section-title">Overview</div>
+      <p>Integrating security throughout the software development lifecycle from design through deployment and maintenance.</p>
+      <div class="section-title">Key Topics</div>
+      <ul class="key-points">
+        <li><strong>Lifecycle Models:</strong> Microsoft SDL, SAFECode, Touchpoints framework</li>
+        <li><strong>Secure Design:</strong> Threat modeling, architecture review, security patterns</li>
+        <li><strong>Secure Development:</strong> Secure coding standards, code review, pair programming</li>
+        <li><strong>Testing & Verification:</strong> Penetration testing, security testing, CI/CD integration</li>
+        <li><strong>Agile & DevSecOps:</strong> Continuous security in rapid development</li>
+        <li><strong>Third-Party Risk:</strong> Dependency management, supply chain security</li>
+        <li><strong>Deployment & Maintenance:</strong> Secure configuration, patching, updates</li>
+        <li><strong>Maturity Models:</strong> SAMM, BSIMM, Common Criteria</li>
+        <li><strong>Domain-Specific:</strong> Cloud, IoT, embedded systems, autonomous vehicles</li>
+      </ul>
+      <div class="pdf-citation">
+        <strong>Source:</strong> CyBOK v1.1.0 - Secure Software Lifecycle. Crown Copyright 2021.
+      </div>
+    </div>
+
+    <div class="nav-buttons">
+      <a href="part-3.html" class="nav-btn">← Back to Part III</a>
+      <a href="part-5.html" class="nav-btn">Continue to Part V →</a>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <p><strong>CyBOK v1.1.0 - Part IV: Software & Platform Security</strong></p>
+    <p>Content extracted and summarized from the official CyBOK v1.1.0 PDF</p>
+    <p style="margin-top: 1rem; opacity: 0.8;">© Crown Copyright, The National Cyber Security Centre 2021</p>
+  </footer>
+
+</body>
+</html>

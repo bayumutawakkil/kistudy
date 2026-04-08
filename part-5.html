@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Part V: Infrastructure Security - CyBOK">
+  <title>Part V - CyBOK v1.1.0</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      color: #2c3e50;
+      line-height: 1.6;
+    }
+    .navbar {
+      background: #2c3e50;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      transition: var(--transition-smooth);
+    }
+    .navbar a:hover { color: #F59E0B; }
+    .header {
+      background: linear-gradient(135deg, #F59E0B 0%, #FCD34D 100%);
+      color: white;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+    .header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 3rem 1.5rem; }
+    .ka-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-left: 4px solid #F59E0B;
+    }
+    .ka-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: #1f2937; }
+    .ka-number {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #FEF3C7, #FCD34D);
+      color: #B45309;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      margin-right: 1rem;
+    }
+    .section-title { font-size: 1.2rem; font-weight: 700; color: #4b5563; margin: 1.5rem 0 1rem; }
+    .key-points {
+      background: #f8f9fa;
+      border-left: 4px solid #F59E0B;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+    }
+    .key-points li { margin: 0.5rem 0; }
+    .pdf-citation {
+      background: #fffbeb;
+      border-left: 4px solid #f59e0b;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+    .footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      margin-top: 3rem;
+    }
+    .nav-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: space-between;
+      margin-top: 2rem;
+    }
+    .nav-btn {
+      padding: 0.75rem 1.5rem;
+      background: #F59E0B;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: var(--transition-smooth);
+    }
+    .nav-btn:hover { background: #B45309; }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="index-dashboard.html">← Back to Dashboard</a>
+    <strong>Part V: Infrastructure Security</strong>
+    <a href="index-dashboard.html">Return to Dashboard</a>
+  </div>
+
+  <div class="header">
+    <h1>Part V: Infrastructure Security</h1>
+    <p>Applied cryptography, networks, hardware, cyber-physical systems, and telecommunications</p>
+  </div>
+
+  <div class="container">
+    
+    <!-- KA 17 -->
+    <div class="ka-card">
+      <h3><span class="ka-number">17</span>Applied Cryptography</h3>
+      <div class="section-title">Overview</div>
+      <p>Practical application of cryptography including implementation considerations, key management, and deployment of cryptographic systems in real-world scenarios.</p>
+      <div class="section-title">Key Topics</div>
+      <ul class="key-points">
+        <li><strong>Cryptographic Libraries:</strong> OpenSSL, libsodium, implementation bugs</li>
+        <li><strong>Key Management:</strong> Key generation, storage, derivation, rotation</li>
+        <li><strong>Public Key Infrastructure (PKI):</strong> Certificate authorities, trust anchors</li>
+        <li><strong>Digital Certificates:</strong> X.509, validation, revocation (CRL, OCSP)</li>
+        <li><strong>TLS/SSL Deployment:</strong> Configuration, cipher suites, protocol versions</li>
+        <li><strong>Side-Channel Attacks:</strong> Timing attacks, power analysis, cache attacks</li>
+        <li><strong>Randomness & Entropy:</strong> Random number generation, seeding</li>
+        <li><strong>Key Escrow & Backdoors:</strong> Policy and technical implications</li>
+      </ul>
+      <div class="pdf-citation">
+        <strong>Source:</strong> CyBOK v1.1.0 - Applied Cryptography. Crown Copyright 2021.
+      </div>
+    </div>
+
+    <!-- KA 18 -->
+    <div class="ka-card">
+      <h3><span class="ka-number">18</span>Network Security</h3>
+      <div class="section-title">Overview</div>
+      <p>Security of network infrastructure from physical layer to application layer, covering protocols, threats, detection, and defense mechanisms.</p>
+      <div class="section-title">Key Topics</div>
+      <ul class="key-points">
+        <li><strong>Network Protocols:</strong> TCP/IP stack, routing, DNS, BGP</li>
+        <li><strong>Protocol Vulnerabilities:</strong> Spoofing, sniffing, replay attacks</li>
+        <li><strong>DDoS Attacks:</strong> Volumetric, protocol-based, application-layer attacks</li>
+        <li><strong>Man-in-the-Middle (MitM):</strong> ARP poisoning, DNS hijacking, SSL stripping</li>
+        <li><strong>Firewall & Filtering:</strong> Stateful inspection, packet filtering, proxy firewalls</li>
+        <li><strong>Intrusion Detection/Prevention:</strong> IDS/IPS, anomaly detection</li>
+        <li><strong>VPN & Tunneling:</strong> IPsec, GRE, secure remote access</li>
+        <li><strong>Software-Defined Networking (SDN):</strong> Security implications</li>
+        <li><strong>Network Monitoring:</strong> Flow analysis, NETFLOW, packet capture</li>
+      </ul>
+      <div class="pdf-citation">
+        <strong>Source:</strong> CyBOK v1.1.0 - Network Security. Crown Copyright 2021.
+      </div>
+    </div>
+
+    <!-- KA 19 -->
+    <div class="ka-card">
+      <h3><span class="ka-number">19</span>Hardware Security</h3>
+      <div class="section-title">Overview</div>
+      <p>Physical security of computing devices including secure processors, tamper resistance, and protection against physical attacks and chip-level threats.</p>
+      <div class="section-title">Key Topics</div>
+      <ul class="key-points">
+        <li><strong>Trusted Platform Module (TPM):</strong> Root of trust, attestation, key storage</li>
+        <li><strong>Secure Boot:</strong> UEFi secure boot, chain of trust, firmware security</li>
+        <li><strong>Hardware Attacks:</strong> Side-channel analysis, fault injection, physical tampering</li>
+        <li><strong>Power Analysis:</strong> Simple and differential power analysis</li>
+        <li><strong>Timing Attacks:</strong> Cache attacks (Spectre, Meltdown), branch prediction</li>
+        <li><strong>Hardware Trojans:</strong> Malicious modifications in chip design</li>
+        <li><strong>Cryptographic Accelerators:</strong> Specialized hardware implementation</li>
+        <li><strong>Physically Unclonable Functions (PUF):</strong> Unique device identifiers</li>
+        <li><strong>Secure Enclaves:</strong> Intel SGX, ARM TrustZone security</li>
+      </ul>
+      <div class="pdf-citation">
+        <strong>Source:</strong> CyBOK v1.1.0 - Hardware Security. Crown Copyright 2021.
+      </div>
+    </div>
+
+    <!-- KA 20 -->
+    <div class="ka-card">
+      <h3><span class="ka-number">20</span>Cyber-Physical Systems Security</h3>
+      <div class="section-title">Overview</div>
+      <p>Security of systems that combine computation with physical world interaction, where cyber attacks can have direct physical consequences.</p>
+      <div class="section-title">Key Topics</div>
+      <ul class="key-points">
+        <li><strong>SCADA & Industrial Control:</strong> Legacy systems, real-time constraints</li>
+        <li><strong>Critical Infrastructure:</strong> Power grids, water systems, transportation</li>
+        <li><strong>IoT Security:</strong> Constrained devices, wireless networks, firmware updates</li>
+        <li><strong>Autonomous Vehicles:</strong> Vehicle-to-everything (V2X), sensor security</li>
+        <li><strong>Medical Devices:</strong> Implantable devices, hospital systems, interoperability</li>
+        <li><strong>Robotics:</strong> Physical safety constraints, human-robot interaction</li>
+        <li><strong>Anomaly Detection:</strong> Real-time threat detection in operational systems</li>
+        <li><strong>Resilience & Redundancy:</strong> Fault tolerance, failsafe mechanisms</li>
+        <li><strong>Compliance & Standards:</strong> IEC 62443, NIST guidelines for CPS</li>
+      </ul>
+      <div class="pdf-citation">
+        <strong>Source:</strong> CyBOK v1.1.0 - Cyber-Physical Systems Security. Crown Copyright 2021.
+      </div>
+    </div>
+
+    <!-- KA 21 -->
+    <div class="ka-card">
+      <h3><span class="ka-number">21</span>Physical Layer & Telecommunications Security</h3>
+      <div class="section-title">Overview</div>
+      <p>Security at the physical layer of wireless and wired communications, addressing electromagnetic and physical threats to communication channels.</p>
+      <div class="section-title">Key Topics</div>
+      <ul class="key-points">
+        <li><strong>Spectrum & Electromagnetic Security:</strong> Jamming, eavesdropping, interference</li>
+        <li><strong>Physical Layer Cryptography:</strong> Exploiting channel characteristics for security</li>
+        <li><strong>Wireless Security:</strong> Wi-Fi, Bluetooth, cellular (4G/5G) protocols</li>
+        <li><strong>Anti-Jamming & Frequency Hopping:</strong> Resilience to interference</li>
+        <li><strong>Device Fingerprinting:</strong> Identifying devices from physical layer signatures</li>
+        <li><strong>Secure Ranging & Positioning:</strong> GPS spoofing, distance verification</li>
+        <li><strong>Covert Channels:</strong> Side-channel information leakage</li>
+        <li><strong>TEMPEST & Emanations Security:</strong> Unintentional electromagnetic leakage</li>
+        <li><strong>Optical & Quantum Communications:</strong> Emerging secure communication methods</li>
+      </ul>
+      <div class="pdf-citation">
+        <strong>Source:</strong> CyBOK v1.1.0 - Physical Layer & Telecommunications Security. Crown Copyright 2021.
+      </div>
+    </div>
+
+    <div class="nav-buttons">
+      <a href="part-4.html" class="nav-btn">← Back to Part IV</a>
+      <a href="index-dashboard.html" class="nav-btn">Return to Dashboard</a>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <p><strong>CyBOK v1.1.0 - Part V: Infrastructure Security</strong></p>
+    <p>Content extracted and summarized from the official CyBOK v1.1.0 PDF</p>
+    <p style="margin-top: 1rem; opacity: 0.8;">© Crown Copyright, The National Cyber Security Centre 2021</p>
+  </footer>
+
+</body>
+</html>
