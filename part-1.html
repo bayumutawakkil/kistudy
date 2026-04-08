@@ -3,223 +3,129 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Part I: Human, Organisational & Regulatory Aspects - CyBOK">
-  <title>Part I - CyBOK v1.1.0</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-      color: #2c3e50;
-      line-height: 1.6;
-    }
-    .navbar {
-      background: #2c3e50;
-      padding: 1rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    .navbar a {
-      color: white;
-      text-decoration: none;
-      margin: 0 1rem;
-      transition: var(--transition-smooth);
-    }
-    .navbar a:hover { color: #667eea; }
-    .header {
-      background: linear-gradient(135deg, #8B5CF6 0%, #D8B4FE 100%);
-      color: white;
-      padding: 3rem 1.5rem;
-      text-align: center;
-    }
-    .header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    .container { max-width: 1000px; margin: 0 auto; padding: 3rem 1.5rem; }
-    .ka-card {
-      background: white;
-      border-radius: 12px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      border-left: 4px solid #8B5CF6;
-    }
-    .ka-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: #1f2937; }
-    .ka-number {
-      display: inline-block;
-      width: 40px;
-      height: 40px;
-      background: linear-gradient(135deg, #E9D5FF, #DDD6FE);
-      color: #6D28D9;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      margin-right: 1rem;
-    }
-    .section-title { font-size: 1.2rem; font-weight: 700; color: #4b5563; margin: 1.5rem 0 1rem; }
-    .key-points {
-      background: #f8f9fa;
-      border-left: 4px solid #8B5CF6;
-      padding: 1.5rem;
-      margin: 1rem 0;
-      border-radius: 8px;
-    }
-    .key-points li { margin: 0.5rem 0; }
-    .pdf-citation {
-      background: #fffbeb;
-      border-left: 4px solid #f59e0b;
-      padding: 1rem;
-      margin: 1.5rem 0;
-      border-radius: 8px;
-      font-size: 0.9rem;
-    }
-    .footer {
-      background: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 2rem 1.5rem;
-      margin-top: 3rem;
-    }
-    .nav-buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: space-between;
-      margin-top: 2rem;
-    }
-    .nav-btn {
-      padding: 0.75rem 1.5rem;
-      background: #667eea;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: var(--transition-smooth);
-    }
-    .nav-btn:hover { background: #764ba2; }
-    .nav-btn:disabled { background: #ccc; cursor: not-allowed; }
-  </style>
+  <meta name="description" content="Bagian I: Aspek Manusia, Organisasi & Regulasi - CyBOK">
+  <title>Bagian I - CyBOK v1.1.0</title>
+  <link rel="stylesheet" href="css/parts.css">
+  <style>body { --navbar-class: part-1; }</style>
 </head>
-<body>
+<body class="part-1">
 
   <div class="navbar">
-    <a href="index-dashboard.html">← Back to Dashboard</a>
-    <strong>Part I: Human, Organisational & Regulatory Aspects</strong>
-    <a href="part-2.html">Next Part →</a>
+    <a href="index.html">← Kembali ke Dasbor</a>
+    <strong>Bagian I: Aspek Manusia, Organisasi & Regulasi</strong>
+    <a href="part-2.html">Bagian Berikutnya →</a>
   </div>
 
   <div class="header">
-    <h1>Part I: Human, Organisational & Regulatory Aspects</h1>
-    <p>Understanding governance, regulations, human factors, and privacy in cybersecurity</p>
+    <h1>Bagian I: Aspek Manusia, Organisasi & Regulasi</h1>
+    <p>Memahami tata kelola, regulasi, faktor manusia, dan privasi dalam keamanan siber</p>
   </div>
 
   <div class="container">
     
     <!-- KA 1 -->
     <div class="ka-card">
-      <h3><span class="ka-number">1</span>Risk Management & Governance</h3>
+      <h3><span class="ka-number">1</span>Manajemen Risiko & Tata Kelola</h3>
       
-      <div class="section-title">Overview</div>
-      <p>Risk management and governance address how organizations systematically identify, measure, and manage cybersecurity risks. This knowledge area emphasizes organizational approaches to understanding and mitigating security threats.</p>
+      <div class="section-title">Ikhtisar</div>
+      <p>Manajemen risiko dan tata kelola menangani bagaimana organisasi secara sistematis mengidentifikasi, mengukur, dan mengelola risiko keamanan siber. Area pengetahuan ini menekankan pendekatan organisasi untuk memahami dan mengurangi ancaman keamanan.</p>
       
-      <div class="section-title">Key Topics</div>
+      <div class="section-title">Topik Utama</div>
       <ul class="key-points">
-        <li><strong>Risk Assessment Methods:</strong> Quantitative and qualitative approaches to evaluating security risks</li>
-        <li><strong>Governance Frameworks:</strong> ISO 27005, NIST, and organizational risk management practices</li>
-        <li><strong>Asset Management:</strong> Identifying and valuing critical assets</li>
-        <li><strong>Threat & Vulnerability Analysis:</strong> Understanding attack vectors and system weaknesses</li>
-        <li><strong>Risk Metrics & KPIs:</strong> Measuring and monitoring security performance</li>
-        <li><strong>Business Continuity & Disaster Recovery:</strong> Planning for security incidents</li>
-        <li><strong>Incident Response Planning:</strong> Procedures for detecting and responding to breaches</li>
+        <li><strong>Metode Penilaian Risiko:</strong> Pendekatan kuantitatif dan kualitatif untuk mengevaluasi risiko keamanan</li>
+        <li><strong>Kerangka Tata Kelola:</strong> ISO 27005, NIST, dan praktik manajemen risiko organisasi</li>
+        <li><strong>Manajemen Aset:</strong> Mengidentifikasi dan menilai aset kritis</li>
+        <li><strong>Analisis Ancaman & Kerentanan:</strong> Memahami vektor serangan dan kelemahan sistem</li>
+        <li><strong>Metrik Risiko & KPI:</strong> Mengukur dan memantau kinerja keamanan</li>
+        <li><strong>Kontinuitas Bisnis & Pemulihan Bencana:</strong> Perencanaan untuk insiden keamanan</li>
+        <li><strong>Perencanaan Respons Insiden:</strong> Prosedur untuk mendeteksi dan merespons pelanggaran</li>
       </ul>
       
       <div class="pdf-citation">
-        <strong>Source Citation:</strong> CyBOK v1.1.0 - Risk Management & Governance section (relevant content spans multiple chapters in the PDF). Crown Copyright 2021.
+        <strong>Sumber Kutipan:</strong> CyBOK v1.1.0 - bagian Manajemen Risiko & Tata Kelola (konten yang relevan mencakup banyak bab dalam PDF). Hak Cipta Mahkota 2021.
       </div>
     </div>
 
     <!-- KA 2 -->
     <div class="ka-card">
-      <h3><span class="ka-number">2</span>Law & Regulation</h3>
+      <h3><span class="ka-number">2</span>Hukum & Regulasi</h3>
       
-      <div class="section-title">Overview</div>
-      <p>This knowledge area covers the legal and regulatory frameworks that govern cybersecurity, including laws related to cyber crimes, data protection, international agreements, and export controls on cryptographic technologies.</p>
+      <div class="section-title">Ikhtisar</div>
+      <p>Area pengetahuan ini mencakup kerangka hukum dan regulasi yang mengatur keamanan siber, termasuk undang-undang yang terkait dengan kejahatan siber, perlindungan data, perjanjian internasional, dan kontrol ekspor pada teknologi kriptografi.</p>
       
-      <div class="section-title">Key Topics</div>
+      <div class="section-title">Topik Utama</div>
       <ul class="key-points">
-        <li><strong>Cybercrime Laws:</strong> Computer Misuse Acts, unauthorized access provisions, DDoS legislation</li>
-        <li><strong>Data Protection Regulations:</strong> GDPR, privacy laws, data breach notification requirements</li>
-        <li><strong>International Frameworks:</strong> Budapest Convention on Cybercrime, mutual legal assistance treaties</li>
-        <li><strong>Intellectual Property:</strong> Copyright, patents, trade secrets in digital context</li>
-        <li><strong>Cryptography Export Controls:</strong> Restrictions on exporting encryption technologies</li>
-        <li><strong>Digital Contracts & Signatures:</strong> Electronic evidence and digital signatures in law</li>
-        <li><strong>Liability & Compliance:</strong> Security audit obligations, reporting requirements</li>
+        <li><strong>Undang-Undang Kejahatan Siber:</strong> Undang-Undang Penyalahgunaan Komputer, ketentuan akses tidak sah, legislasi DDoS</li>
+        <li><strong>Peraturan Perlindungan Data:</strong> GDPR, undang-undang privasi, persyaratan pemberitahuan pelanggaran data</li>
+        <li><strong>Kerangka Internasional:</strong> Konvensi Budapest tentang Kejahatan Siber, perjanjian bantuan hukum timbal balik</li>
+        <li><strong>Kekayaan Intelektual:</strong> Hak cipta, paten, rahasia dagang dalam konteks digital</li>
+        <li><strong>Kontrol Ekspor Kriptografi:</strong> Pembatasan ekspor teknologi enkripsi</li>
+        <li><strong>Kontrak Digital & Tanda Tangan:</strong> Bukti elektronik dan tanda tangan digital dalam hukum</li>
+        <li><strong>Tanggung Jawab & Kepatuhan:</strong> Kewajiban audit keamanan, persyaratan pelaporan</li>
       </ul>
       
       <div class="pdf-citation">
-        <strong>Source Citation:</strong> CyBOK v1.1.0 - Law & Regulation section. Crown Copyright 2021.
+        <strong>Sumber Kutipan:</strong> CyBOK v1.1.0 - bagian Hukum & Regulasi. Hak Cipta Mahkota 2021.
       </div>
     </div>
 
     <!-- KA 3 -->
     <div class="ka-card">
-      <h3><span class="ka-number">3</span>Human Factors</h3>
+      <h3><span class="ka-number">3</span>Faktor Manusia</h3>
       
-      <div class="section-title">Overview</div>
-      <p>Human factors recognizes that people are integral to cybersecurity - not merely a "weak link." This area examines how psychology, usability, and organizational behavior affect security effectiveness.</p>
+      <div class="section-title">Ikhtisar</div>
+      <p>Faktor manusia mengakui bahwa orang adalah bagian integral dari keamanan siber - bukan hanya "tautan lemah". Area ini meneliti bagaimana psikologi, kegunaan, dan perilaku organisasi mempengaruhi efektivitas keamanan.</p>
       
-      <div class="section-title">Key Topics</div>
+      <div class="section-title">Topik Utama</div>
       <ul class="key-points">
-        <li><strong>Security Psychology:</strong> Understanding user behavior, motivation, and compliance</li>
-        <li><strong>Usability & UX Security:</strong> Designing security that users can and will use correctly</li>
-        <li><strong>Password Policies:</strong> Balancing security requirements with human capability</li>
-        <li><strong>Security Awareness Training:</strong> Effective education and behavior change programs</li>
-        <li><strong>Social Engineering:</strong> Manipulation techniques targeting human trust</li>
-        <li><strong>Insider Threats:</strong> Understanding, managing, and detecting malicious insiders</li>
-        <li><strong>Secure Culture:</strong> Building organizational security mindsets and practices</li>
+        <li><strong>Psikologi Keamanan:</strong> Memahami perilaku pengguna, motivasi, dan kepatuhan</li>
+        <li><strong>Kegunaan & Keamanan UX:</strong> Merancang keamanan yang dapat dan akan digunakan pengguna dengan benar</li>
+        <li><strong>Kebijakan Kata Sandi:</strong> Menyeimbangkan persyaratan keamanan dengan kemampuan manusia</li>
+        <li><strong>Pelatihan Kesadaran Keamanan:</strong> Program pendidikan dan perubahan perilaku yang efektif</li>
+        <li><strong>Rekayasa Sosial:</strong> Teknik manipulasi yang menargetkan kepercayaan manusia</li>
+        <li><strong>Ancaman Insider:</strong> Memahami, mengelola, dan mendeteksi orang dalam yang berbahaya</li>
+        <li><strong>Budaya Aman:</strong> Membangun mentalitas dan praktik keamanan organisasi</li>
       </ul>
       
       <div class="pdf-citation">
-        <strong>Source Citation:</strong> CyBOK v1.1.0 - Human Factors section. Crown Copyright 2021.
+        <strong>Sumber Kutipan:</strong> CyBOK v1.1.0 - bagian Faktor Manusia. Hak Cipta Mahkota 2021.
       </div>
     </div>
 
     <!-- KA 4 -->
     <div class="ka-card">
-      <h3><span class="ka-number">4</span>Privacy & Online Rights</h3>
+      <h3><span class="ka-number">4</span>Privasi & Hak Online</h3>
       
-      <div class="section-title">Overview</div>
-      <p>Privacy is a fundamental human right. This knowledge area examines both technical and policy approaches to protecting individual privacy in digital systems, including Privacy by Design principles.</p>
+      <div class="section-title">Ikhtisar</div>
+      <p>Privasi adalah hak asasi manusia fundamental. Area pengetahuan ini memeriksa pendekatan teknis dan kebijakan untuk melindungi privasi individu dalam sistem digital, termasuk prinsip Privasi menurut Desain.</p>
       
-      <div class="section-title">Key Topics</div>
+      <div class="section-title">Topik Utama</div>
       <ul class="key-points">
-        <li><strong>Privacy Threats:</strong> Data collection, tracking, surveillance, profiling</li>
-        <li><strong>Privacy by Design:</strong> Building privacy into system architecture from the start</li>
-        <li><strong>Data Anonymization & Pseudonymization:</strong> Techniques to de-identify personal information</li>
-        <li><strong>Privacy-Enhancing Technologies (PETs):</strong> Differential privacy, homomorphic encryption, federated learning</li>
-        <li><strong>Regulatory Compliance:</strong> GDPR, privacy laws, consent requirements</li>
-        <li><strong>Online Rights & Digital Freedoms:</strong> Freedom of expression, access rights</li>
-        <li><strong>Data Breach Response:</strong> Notification, remediation, individual rights</li>
+        <li><strong>Ancaman Privasi:</strong> Pengumpulan data, pelacakan, pengawasan, profiling</li>
+        <li><strong>Privasi menurut Desain:</strong> Membangun privasi ke dalam arsitektur sistem dari awal</li>
+        <li><strong>Anonimisasi Data & Pseudonimisasi:</strong> Teknik untuk menghapus identitas informasi pribadi</li>
+        <li><strong>Teknologi Peningkat Privasi (PET):</strong> Privasi diferensial, enkripsi homomorfik, pembelajaran terfederasi</li>
+        <li><strong>Kepatuhan Regulasi:</strong> GDPR, undang-undang privasi, persyaratan persetujuan</li>
+        <li><strong>Hak Online & Kebebasan Digital:</strong> Kebebasan berekspresi, hak akses</li>
+        <li><strong>Respons Pelanggaran Data:</strong> Pemberitahuan, remediasi, hak individu</li>
       </ul>
       
       <div class="pdf-citation">
-        <strong>Source Citation:</strong> CyBOK v1.1.0 - Privacy & Online Rights section. Crown Copyright 2021.
+        <strong>Sumber Kutipan:</strong> CyBOK v1.1.0 - bagian Privasi & Hak Online. Hak Cipta Mahkota 2021.
       </div>
     </div>
 
     <div class="nav-buttons">
-      <a href="index-dashboard.html" class="nav-btn">← Back to Dashboard</a>
-      <a href="part-2.html" class="nav-btn">Continue to Part II →</a>
+      <a href="index.html" class="nav-btn">← Kembali ke Dasbor</a>
+      <a href="part-2.html" class="nav-btn">Lanjut ke Bagian II →</a>
     </div>
 
   </div>
 
   <footer class="footer">
-    <p><strong>CyBOK v1.1.0 - Part I: Human, Organisational & Regulatory Aspects</strong></p>
-    <p>Content extracted and summarized from the official CyBOK v1.1.0 PDF</p>
-    <p style="margin-top: 1rem; opacity: 0.8;">© Crown Copyright, The National Cyber Security Centre 2021</p>
+    <p><strong>CyBOK v1.1.0 - Bagian I: Aspek Manusia, Organisasi & Regulasi</strong></p>
+    <p>Konten diekstrak dan diringkas dari PDF CyBOK v1.1.0 resmi</p>
+    <p style="margin-top: 1rem; opacity: 0.8;">© Hak Cipta Mahkota, Pusat Keamanan Siber Nasional 2021</p>
   </footer>
 
 </body>

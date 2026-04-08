@@ -3,200 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Part V: Infrastructure Security - CyBOK">
-  <title>Part V - CyBOK v1.1.0</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-      color: #2c3e50;
-      line-height: 1.6;
-    }
-    .navbar {
-      background: #2c3e50;
-      padding: 1rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    .navbar a {
-      color: white;
-      text-decoration: none;
-      margin: 0 1rem;
-      transition: var(--transition-smooth);
-    }
-    .navbar a:hover { color: #F59E0B; }
-    .header {
-      background: linear-gradient(135deg, #F59E0B 0%, #FCD34D 100%);
-      color: white;
-      padding: 3rem 1.5rem;
-      text-align: center;
-    }
-    .header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    .container { max-width: 1000px; margin: 0 auto; padding: 3rem 1.5rem; }
-    .ka-card {
-      background: white;
-      border-radius: 12px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      border-left: 4px solid #F59E0B;
-    }
-    .ka-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: #1f2937; }
-    .ka-number {
-      display: inline-block;
-      width: 40px;
-      height: 40px;
-      background: linear-gradient(135deg, #FEF3C7, #FCD34D);
-      color: #B45309;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      margin-right: 1rem;
-    }
-    .section-title { font-size: 1.2rem; font-weight: 700; color: #4b5563; margin: 1.5rem 0 1rem; }
-    .key-points {
-      background: #f8f9fa;
-      border-left: 4px solid #F59E0B;
-      padding: 1.5rem;
-      margin: 1rem 0;
-      border-radius: 8px;
-    }
-    .key-points li { margin: 0.5rem 0; }
-    .pdf-citation {
-      background: #fffbeb;
-      border-left: 4px solid #f59e0b;
-      padding: 1rem;
-      margin: 1.5rem 0;
-      border-radius: 8px;
-      font-size: 0.9rem;
-    }
-    .footer {
-      background: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 2rem 1.5rem;
-      margin-top: 3rem;
-    }
-    .nav-buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: space-between;
-      margin-top: 2rem;
-    }
-    .nav-btn {
-      padding: 0.75rem 1.5rem;
-      background: #F59E0B;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: var(--transition-smooth);
-    }
-    .nav-btn:hover { background: #B45309; }
-  </style>
+  <meta name="description" content="Bagian V: Keamanan Infrastruktur - CyBOK">
+  <title>Bagian V - CyBOK v1.1.0</title>
+  <link rel="stylesheet" href="css/parts.css">
+  <style>body { --navbar-class: part-5; }</style>
 </head>
-<body>
+<body class="part-5">
 
   <div class="navbar">
-    <a href="index-dashboard.html">← Back to Dashboard</a>
-    <strong>Part V: Infrastructure Security</strong>
-    <a href="index-dashboard.html">Return to Dashboard</a>
+    <a href="index.html">← Kembali ke Dasbor</a>
+    <strong>Bagian V: Keamanan Infrastruktur</strong>
+    <a href="index.html">Kembali ke Dasbor</a>
   </div>
 
   <div class="header">
-    <h1>Part V: Infrastructure Security</h1>
-    <p>Applied cryptography, networks, hardware, cyber-physical systems, and telecommunications</p>
+    <h1>Bagian V: Keamanan Infrastruktur</h1>
+    <p>Kriptografi terapan, jaringan, perangkat keras, sistem siber-fisik, dan telekomunikasi</p>
   </div>
 
   <div class="container">
     
     <!-- KA 17 -->
     <div class="ka-card">
-      <h3><span class="ka-number">17</span>Applied Cryptography</h3>
-      <div class="section-title">Overview</div>
-      <p>Practical application of cryptography including implementation considerations, key management, and deployment of cryptographic systems in real-world scenarios.</p>
-      <div class="section-title">Key Topics</div>
+      <h3><span class="ka-number">17</span>Kriptografi Terapan</h3>
+      <div class="section-title">Ikhtisar</div>
+      <p>Penerapan praktis kriptografi termasuk pertimbangan implementasi, manajemen kunci, dan penyebaran sistem kriptografi dalam skenario dunia nyata.</p>
+      <div class="section-title">Topik Utama</div>
       <ul class="key-points">
-        <li><strong>Cryptographic Libraries:</strong> OpenSSL, libsodium, implementation bugs</li>
-        <li><strong>Key Management:</strong> Key generation, storage, derivation, rotation</li>
-        <li><strong>Public Key Infrastructure (PKI):</strong> Certificate authorities, trust anchors</li>
-        <li><strong>Digital Certificates:</strong> X.509, validation, revocation (CRL, OCSP)</li>
-        <li><strong>TLS/SSL Deployment:</strong> Configuration, cipher suites, protocol versions</li>
-        <li><strong>Side-Channel Attacks:</strong> Timing attacks, power analysis, cache attacks</li>
-        <li><strong>Randomness & Entropy:</strong> Random number generation, seeding</li>
-        <li><strong>Key Escrow & Backdoors:</strong> Policy and technical implications</li>
+        <li><strong>Pustaka Kriptografi:</strong> OpenSSL, libsodium, bug implementasi</li>
+        <li><strong>Manajemen Kunci:</strong> Generasi kunci, penyimpanan, derivasi, rotasi</li>
+        <li><strong>Infrastruktur Kunci Publik (PKI):</strong> Otoritas sertifikat, jangkar kepercayaan</li>
+        <li><strong>Sertifikat Digital:</strong> X.509, validasi, revokasi (CRL, OCSP)</li>
+        <li><strong>Penyebaran TLS/SSL:</strong> Konfigurasi, cipher suites, versi protokol</li>
+        <li><strong>Serangan Side-Channel:</strong> Serangan waktu, analisis daya, serangan cache</li>
+        <li><strong>Keacakan & Entropi:</strong> Generasi bilangan acak, seeding</li>
+        <li><strong>Escrow Kunci & Backdoor:</strong> Implikasi kebijakan dan teknis</li>
       </ul>
       <div class="pdf-citation">
-        <strong>Source:</strong> CyBOK v1.1.0 - Applied Cryptography. Crown Copyright 2021.
+        <strong>Sumber:</strong> CyBOK v1.1.0 - Kriptografi Terapan. Hak Cipta Mahkota 2021.
       </div>
     </div>
 
     <!-- KA 18 -->
     <div class="ka-card">
-      <h3><span class="ka-number">18</span>Network Security</h3>
-      <div class="section-title">Overview</div>
-      <p>Security of network infrastructure from physical layer to application layer, covering protocols, threats, detection, and defense mechanisms.</p>
-      <div class="section-title">Key Topics</div>
+      <h3><span class="ka-number">18</span>Keamanan Jaringan</h3>
+      <div class="section-title">Ikhtisar</div>
+      <p>Keamanan infrastruktur jaringan dari lapisan fisik hingga lapisan aplikasi, mencakup protokol, ancaman, deteksi, dan mekanisme pertahanan.</p>
+      <div class="section-title">Topik Utama</div>
       <ul class="key-points">
-        <li><strong>Network Protocols:</strong> TCP/IP stack, routing, DNS, BGP</li>
-        <li><strong>Protocol Vulnerabilities:</strong> Spoofing, sniffing, replay attacks</li>
-        <li><strong>DDoS Attacks:</strong> Volumetric, protocol-based, application-layer attacks</li>
-        <li><strong>Man-in-the-Middle (MitM):</strong> ARP poisoning, DNS hijacking, SSL stripping</li>
-        <li><strong>Firewall & Filtering:</strong> Stateful inspection, packet filtering, proxy firewalls</li>
-        <li><strong>Intrusion Detection/Prevention:</strong> IDS/IPS, anomaly detection</li>
-        <li><strong>VPN & Tunneling:</strong> IPsec, GRE, secure remote access</li>
-        <li><strong>Software-Defined Networking (SDN):</strong> Security implications</li>
-        <li><strong>Network Monitoring:</strong> Flow analysis, NETFLOW, packet capture</li>
+        <li><strong>Protokol Jaringan:</strong> Tumpukan TCP/IP, routing, DNS, BGP</li>
+        <li><strong>Kerentanan Protokol:</strong> Spoofing, sniffing, serangan replay</li>
+        <li><strong>Serangan DDoS:</strong> Volumetrik, berbasis protokol, serangan lapisan aplikasi</li>
+        <li><strong>Man-in-the-Middle (MitM):</strong> Pemoisonan ARP, pembajakan DNS, SSL stripping</li>
+        <li><strong>Firewall & Filtering:</strong> Inspeksi stateful, filtering paket, firewall proxy</li>
+        <li><strong>Deteksi/Pencegahan Intrusi:</strong> IDS/IPS, deteksi anomali</li>
+        <li><strong>VPN & Tunneling:</strong> IPsec, GRE, akses jarak jauh aman</li>
+        <li><strong>Jaringan yang Didefinisikan Perangkat Lunak (SDN):</strong> Implikasi keamanan</li>
+        <li><strong>Pemantauan Jaringan:</strong> Analisis alur, NETFLOW, tangkapan paket</li>
       </ul>
       <div class="pdf-citation">
-        <strong>Source:</strong> CyBOK v1.1.0 - Network Security. Crown Copyright 2021.
+        <strong>Sumber:</strong> CyBOK v1.1.0 - Keamanan Jaringan. Hak Cipta Mahkota 2021.
       </div>
     </div>
 
     <!-- KA 19 -->
     <div class="ka-card">
-      <h3><span class="ka-number">19</span>Hardware Security</h3>
-      <div class="section-title">Overview</div>
-      <p>Physical security of computing devices including secure processors, tamper resistance, and protection against physical attacks and chip-level threats.</p>
-      <div class="section-title">Key Topics</div>
+      <h3><span class="ka-number">19</span>Keamanan Perangkat Keras</h3>
+      <div class="section-title">Ikhtisar</div>
+      <p>Keamanan fisik perangkat komputasi termasuk prosesor aman, ketahanan terhadap gangguan, dan perlindungan terhadap serangan fisik dan ancaman tingkat chip.</p>
+      <div class="section-title">Topik Utama</div>
       <ul class="key-points">
-        <li><strong>Trusted Platform Module (TPM):</strong> Root of trust, attestation, key storage</li>
-        <li><strong>Secure Boot:</strong> UEFi secure boot, chain of trust, firmware security</li>
-        <li><strong>Hardware Attacks:</strong> Side-channel analysis, fault injection, physical tampering</li>
-        <li><strong>Power Analysis:</strong> Simple and differential power analysis</li>
-        <li><strong>Timing Attacks:</strong> Cache attacks (Spectre, Meltdown), branch prediction</li>
-        <li><strong>Hardware Trojans:</strong> Malicious modifications in chip design</li>
-        <li><strong>Cryptographic Accelerators:</strong> Specialized hardware implementation</li>
-        <li><strong>Physically Unclonable Functions (PUF):</strong> Unique device identifiers</li>
-        <li><strong>Secure Enclaves:</strong> Intel SGX, ARM TrustZone security</li>
+        <li><strong>Trusted Platform Module (TPM):</strong> Akar kepercayaan, attestasi, penyimpanan kunci</li>
+        <li><strong>Secure Boot:</strong> Secure boot UEFi, rantai kepercayaan, keamanan firmware</li>
+        <li><strong>Serangan Perangkat Keras:</strong> Analisis side-channel, injeksi fault, gangguan fisik</li>
+        <li><strong>Analisis Daya:</strong> Analisis daya sederhana dan diferensial</li>
+        <li><strong>Serangan Waktu:</strong> Serangan cache (Spectre, Meltdown), prediksi cabang</li>
+        <li><strong>Trojan Perangkat Keras:</strong> Modifikasi berbahaya dalam desain chip</li>
+        <li><strong>Akselerator Kriptografi:</strong> Implementasi perangkat keras khusus</li>
+        <li><strong>Fungsi yang Tidak Dapat Disalin Secara Fisik (PUF):</strong> Pengenal perangkat unik</li>
+        <li><strong>Enclave Aman:</strong> Intel SGX, keamanan ARM TrustZone</li>
       </ul>
       <div class="pdf-citation">
-        <strong>Source:</strong> CyBOK v1.1.0 - Hardware Security. Crown Copyright 2021.
+        <strong>Sumber:</strong> CyBOK v1.1.0 - Keamanan Perangkat Keras. Hak Cipta Mahkota 2021.
       </div>
     </div>
 
     <!-- KA 20 -->
     <div class="ka-card">
-      <h3><span class="ka-number">20</span>Cyber-Physical Systems Security</h3>
-      <div class="section-title">Overview</div>
-      <p>Security of systems that combine computation with physical world interaction, where cyber attacks can have direct physical consequences.</p>
-      <div class="section-title">Key Topics</div>
+      <h3><span class="ka-number">20</span>Keamanan Sistem Siber-Fisik</h3>
+      <div class="section-title">Ikhtisar</div>
+      <p>Keamanan sistem yang menggabungkan komputasi dengan interaksi dunia fisik, di mana serangan siber dapat memiliki konsekuensi fisik langsung.</p>
+      <div class="section-title">Topik Utama</div>
       <ul class="key-points">
-        <li><strong>SCADA & Industrial Control:</strong> Legacy systems, real-time constraints</li>
-        <li><strong>Critical Infrastructure:</strong> Power grids, water systems, transportation</li>
-        <li><strong>IoT Security:</strong> Constrained devices, wireless networks, firmware updates</li>
-        <li><strong>Autonomous Vehicles:</strong> Vehicle-to-everything (V2X), sensor security</li>
-        <li><strong>Medical Devices:</strong> Implantable devices, hospital systems, interoperability</li>
-        <li><strong>Robotics:</strong> Physical safety constraints, human-robot interaction</li>
-        <li><strong>Anomaly Detection:</strong> Real-time threat detection in operational systems</li>
-        <li><strong>Resilience & Redundancy:</strong> Fault tolerance, failsafe mechanisms</li>
-        <li><strong>Compliance & Standards:</strong> IEC 62443, NIST guidelines for CPS</li>
+        <li><strong>SCADA & Kontrol Industri:</strong> Sistem legacy, kendala real-time</li>
+        <li><strong>Infrastruktur Kritis:</strong> Jaringan listrik, sistem air, transportasi</li>
+        <li><strong>Keamanan IoT:</strong> Perangkat terbatas, jaringan nirkabel, pembaruan firmware</li>
+        <li><strong>Kendaraan Otonom:</strong> Vehicle-to-everything (V2X), keamanan sensor</li>
+        <li><strong>Perangkat Medis:</strong> Perangkat yang dapat ditanamkan, sistem rumah sakit, interoperabilitas</li>
+        <li><strong>Robotika:</strong> Kendala keselamatan fisik, interaksi manusia-robot</li>
+        <li><strong>Deteksi Anomali:</strong> Deteksi ancaman real-time dalam sistem operasional</li>
+        <li><strong>Ketahanan & Redundansi:</strong> Toleransi fault, mekanisme failsafe</li>
+        <li><strong>Kepatuhan & Standar:</strong> IEC 62443, pedoman NIST untuk CPS</li>
       </ul>
       <div class="pdf-citation">
         <strong>Source:</strong> CyBOK v1.1.0 - Cyber-Physical Systems Security. Crown Copyright 2021.
@@ -227,7 +134,7 @@
 
     <div class="nav-buttons">
       <a href="part-4.html" class="nav-btn">← Back to Part IV</a>
-      <a href="index-dashboard.html" class="nav-btn">Return to Dashboard</a>
+      <a href="index.html" class="nav-btn">Kembali ke Dasbor</a>
     </div>
 
   </div>
